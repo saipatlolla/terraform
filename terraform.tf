@@ -1,6 +1,6 @@
 provider "aws" {
-    access_key = "AKIAWQOOXHC5A7WS4ZVK"
-    secret_key = "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"
+    access_key = ["access_key"]
+    secret_key = ["secret_key"]
     region = "	us-west-2"
 
 resource "aws_vpc" "test_vpc" {
