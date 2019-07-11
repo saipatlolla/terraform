@@ -40,8 +40,8 @@ resource "aws_security_group" "allow_http" {
 resource "aws_instance" "testvm" {
   ami = "ami-005bdb005fb00e791"
   instance_type = "t2.micro"
-  subnet_id = "${aws_subnet.test_subnet.id}"
-  security_groups = "{aws_security_group.allow_http.id}"
+  subnet_id = ["${aws_subnet.test_subnet.id}"]
+  security_groups = ["${aws_security_group.allow_http.id}"]
 }
 
 resource "aws_network_interface" "test_nic" {
